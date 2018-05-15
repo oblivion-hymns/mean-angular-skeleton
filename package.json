@@ -1,6 +1,6 @@
 {
-	"name": "mercury",
-	"version": "0.7.0",
+	"name": "MEAN Skeleton Application",
+	"version": "1.0.0",
 	"private": true,
 	"scripts": {
 		"build": "webpack --config ./config/webpack/webpack.config.dev.js --progress --profile --watch",
