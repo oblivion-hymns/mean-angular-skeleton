@@ -8,6 +8,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {ModuleWithProviders, NgModule} from '@angular/core';
 import {RouterModule} from '@angular/router';
+import {MatCardModule} from '@angular/material/card';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
 	imports: [
@@ -15,7 +17,10 @@ import {RouterModule} from '@angular/router';
 		RouterModule,
 		FormsModule,
 		FlexLayoutModule,
-		HttpClientModule
+		HttpClientModule,
+
+		MatCardModule,
+		MatToolbarModule
 	],
 
 	//Make these modules/directives/components available to other areas of the application
@@ -25,7 +30,10 @@ import {RouterModule} from '@angular/router';
 		FormsModule,
 		HttpClientModule,
 		ReactiveFormsModule,
-		RouterModule
+		RouterModule,
+
+		MatCardModule,
+		MatToolbarModule
 	],
 
 	//Components, directives and pipes that comprise this module

@@ -1,0 +1,40 @@
+{
+	"check-coverage": true,
+	"lines": 90,
+	"statements": 90,
+	"functions": 90,
+	"branches": 90,
+	"reporter": [
+		"html",
+		"text-summary"
+	],
+	"report-dir": "artifacts/coverage",
+	"exclude": [
+		".git/**",
+		".nyc_output/**",
+		"aot/**",
+		"app/**",
+		"artifacts/**",
+		"cli/**",
+		"config/**",
+		"db/**",
+		"modules/agency/controllers/**",
+		"modules/api/**",
+		"modules/auth/controllers/**",
+		"modules/building-agency/controllers/**",
+		"modules/contact/controllers/**",
+		"modules/communication/controllers/**",
+		"modules/help/controllers/**",
+		"modules/incident/controllers/**",
+		"modules/user/controllers/**",
+		"modules/utility/models/response.js",
+		"node_modules/**",
+		"public/**",
+		"test/**",
+		"module-loader.js",
+		"test.js",
+		"**/**importer.js",
+		"**/routes.js",
+		"**/has-permission.js"
+	]
+}

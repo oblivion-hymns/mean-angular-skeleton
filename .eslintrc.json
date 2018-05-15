@@ -1,0 +1,44 @@
+{
+	"globals": {
+		"__dirname": true,
+		"before": true,
+		"beforeEach": true,
+		"describe": true,
+		"done": true,
+		"global": true,
+		"it": true,
+		"module": true,
+		"process": true,
+		"require": true
+	},
+	"env": {
+		"browser": true,
+		"es6": true
+	},
+	"extends": "eslint:recommended",
+	"parserOptions": {
+		"sourceType": "module"
+	},
+	"rules": {
+		"indent": [
+			"error",
+			"tab",
+			{ "SwitchCase": 1 }
+		],
+		"linebreak-style": [
+			"error",
+			"unix"
+		],
+		"quotes": [
+			"error",
+			"single"
+		],
+		"semi": [
+			"error",
+			"always"
+		],
+		"no-console": [
+			0
+		]
+	}
+}
