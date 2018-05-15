@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-	selector: 'mercury-loading',
+	selector: 'loading-indicator',
 	templateUrl: './loading.component.html'
 })
 export class LoadingComponent

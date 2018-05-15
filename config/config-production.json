@@ -17,7 +17,7 @@
 			"useMongoClient": true
 		},
 		"port": 27017,
-		"schema": "mercury",
+		"schema": "mean-skeleton-app",
 		"url": "localhost"
 	}
 }

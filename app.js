@@ -13,7 +13,7 @@ const ModuleLoader = require('./module-loader');
 const appPort = config.app.port;
 const app = express();
 app.listen(appPort, () => {
-	console.log('[Mercury] Listening on port ' + appPort);
+	console.log('Listening on port ' + appPort);
 });
 
 //Set up DB
@@ -25,9 +25,12 @@ mongoose.connect(dbString, config.db.options);
 
 //Headers
 app.use(function (req, res, next) {
+	const allowHeaders = 'Origin, Authorization, X-Requested-With, Content-Type, Accept, Cache-Control, Pragma';
+	const allowMethods = 'GET, POST, PUT, PATCH, DELETE, OPTIONS';
+
 	res.setHeader('Access-Control-Allow-Origin', '*');
-	res.setHeader('Access-Control-Allow-Headers', 'Origin, Authorization, X-Requested-With, Content-Type, Accept, Cache-Control, Pragma');
-	res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE, OPTIONS');
+	res.setHeader('Access-Control-Allow-Headers', allowHeaders);
+	res.setHeader('Access-Control-Allow-Methods', allowMethods);
 	res.setHeader('Access-Control-Allow-Credentials', true);
 	next();
 });
@@ -43,14 +46,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
-//Ensure user is logged in before doing anything else
-const isLoggedIn = require('./modules/auth/middleware/is-logged-in');
-app.use(isLoggedIn);
-
-//See required file for details
-const manageHealthNotifications = require('./modules/building-agency/middleware/manage-health-notifications');
-app.use(manageHealthNotifications);
 
 //Module loader
 const moduleLoader = new ModuleLoader(app);

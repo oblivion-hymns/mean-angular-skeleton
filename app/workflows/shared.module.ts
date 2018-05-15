@@ -3,15 +3,10 @@
  */
 import {BrowserModule} from '@angular/platform-browser';
 import {CommonModule} from '@angular/common';
-import {DndModule} from 'ng2-dnd';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 import {HttpClientModule} from '@angular/common/http';
-import {MatButtonModule, MatCardModule, MatCheckboxModule, MatChipsModule, MatDatepickerModule,
-	MatDialogModule, MatDividerModule, MatExpansionModule, MatIconModule, MatInputModule,
-	MatListModule, MatMenuModule, MatNativeDateModule, MatProgressSpinnerModule, MatSelectModule,
-	MatSnackBarModule, MatTooltipModule, MatToolbarModule } from '@angular/material';
 import {ModuleWithProviders, NgModule} from '@angular/core';
 import {RouterModule} from '@angular/router';
 
@@ -19,29 +14,9 @@ import {RouterModule} from '@angular/router';
 	imports: [
 		CommonModule,
 		RouterModule,
-		DndModule.forRoot(),
 		FormsModule,
 		FlexLayoutModule,
-		HttpClientModule,
-
-		MatButtonModule,
-		MatCardModule,
-		MatCheckboxModule,
-		MatChipsModule,
-		MatDatepickerModule,
-		MatDialogModule,
-		MatDividerModule,
-		MatExpansionModule,
-		MatIconModule,
-		MatInputModule,
-		MatListModule,
-		MatMenuModule,
-		MatNativeDateModule,
-		MatProgressSpinnerModule,
-		MatSelectModule,
-		MatSnackBarModule,
-		MatToolbarModule,
-		MatTooltipModule
+		HttpClientModule
 	],
 
 	//Make these modules/directives/components available to other areas of the application
@@ -52,37 +27,13 @@ import {RouterModule} from '@angular/router';
 		HttpModule,
 		HttpClientModule,
 		ReactiveFormsModule,
-		RouterModule,
-		DndModule,
-
-		MatButtonModule,
-		MatCardModule,
-		MatCheckboxModule,
-		MatChipsModule,
-		MatDatepickerModule,
-		MatDialogModule,
-		MatDividerModule,
-		MatExpansionModule,
-		MatIconModule,
-		MatInputModule,
-		MatListModule,
-		MatMenuModule,
-		MatNativeDateModule,
-		MatProgressSpinnerModule,
-		MatSelectModule,
-		MatSnackBarModule,
-		MatToolbarModule,
-		MatTooltipModule
+		RouterModule
 	],
 
 	//Components, directives and pipes that comprise this module
-	declarations: [
+	declarations: [],
 
-	],
-
-	entryComponents: [
-
-	]
+	entryComponents: []
 })
 export class SharedModule
 {

@@ -1,5 +1,6 @@
 /**
  * Wrapper for response objects to help make code more concise
+ * Usage: return new Response(res, 200, '', {})
  */
 class Response
 {
