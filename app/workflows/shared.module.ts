@@ -8,8 +8,11 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {ModuleWithProviders, NgModule} from '@angular/core';
 import {RouterModule} from '@angular/router';
+
 import {MatCardModule} from '@angular/material/card';
+import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {LoadingComponent} from './../components/utility/loading.component';
 
 @NgModule({
 	imports: [
@@ -20,6 +23,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 		HttpClientModule,
 
 		MatCardModule,
+		MatIconModule,
 		MatToolbarModule
 	],
 
@@ -33,11 +37,16 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 		RouterModule,
 
 		MatCardModule,
-		MatToolbarModule
+		MatIconModule,
+		MatToolbarModule,
+
+		LoadingComponent
 	],
 
 	//Components, directives and pipes that comprise this module
-	declarations: [],
+	declarations: [
+		LoadingComponent
+	],
 
 	entryComponents: []
 })
