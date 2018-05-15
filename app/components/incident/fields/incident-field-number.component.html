@@ -1,0 +1,15 @@
+<mat-form-field style="width: 50%;" *ngIf="!display">
+	<input matInput type="number"
+		[placeholder]="label"
+		[min]="min"
+		[max]="max"
+		[disabled]="readonly"
+		[readonly]="readonly"
+		(input)="emitValue()"
+		[(ngModel)]="value"/>
+</mat-form-field>
+
+<div *ngIf="display">
+	<strong>{{label}}</strong><br />
+	{{value || '-'}}
+</div>

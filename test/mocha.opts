@@ -1,0 +1,5 @@
+test.js
+--timeout 120000
+--expose-internals
+--exit
+--slow 1000

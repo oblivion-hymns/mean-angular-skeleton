@@ -1,0 +1,20 @@
+<mat-list-item *ngIf="!isCondensed">
+	<mat-icon mat-list-icon>person</mat-icon>
+
+	<div class="expand margin-left" matLine>
+		{{user.name.last}}, {{user.name.first}}
+	</div>
+	<div class="expand margin-left text-secondary" matLine>
+		{{user.email}}
+	</div>
+</mat-list-item>
+
+<mat-list-item *ngIf="isCondensed">
+	<mat-icon mat-list-icon>person</mat-icon>
+	<div class="expand" matLine>
+		{{user.name.last}}, {{user.name.first}}
+	</div>
+	<span class="text-secondary" matLine>
+		{{user.email}}
+	</span>
+</mat-list-item>

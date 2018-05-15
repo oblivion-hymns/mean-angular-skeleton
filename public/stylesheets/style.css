@@ -1,0 +1,19 @@
+.text-primary
+{
+	color: rgba(0, 0, 0, 0.87);
+}
+
+.text-secondary
+{
+	color: rgba(0, 0, 0, 0.54);
+}
+
+.text-hint
+{
+	color: rgba(0, 0, 0, 0.38);
+}
+
+.text-divider
+{
+	color: rgba(0, 0, 0, 0.12);
+}

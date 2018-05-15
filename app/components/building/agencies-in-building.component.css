@@ -1,0 +1,36 @@
+mat-list-item:hover
+{
+	background-color: rgba(235, 235, 235, 0.54) !important;
+	cursor: pointer;
+}
+
+mat-list-item.active
+{
+	background-color: rgba(66, 134, 244, 0.14) !important;
+	font-weight: bold;
+}
+
+mat-list-item.active:hover
+{
+	background-color: rgba(66, 134, 244, 0.36) !important;
+}
+
+.icon-inline
+{
+	top: 0px;
+}
+
+.good
+{
+	color: rgba(0, 186, 27, 0.87);
+}
+
+.neutral
+{
+	color: rgba(226, 139, 0, 0.87);
+}
+
+.poor
+{
+	color: rgba(165, 0, 0, 0.87);
+}

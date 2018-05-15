@@ -1,0 +1,20 @@
+<div class="expand" *ngIf="isLoading || isError || !hasResults">
+	<!-- Loading -->
+	<div class="text-center" *ngIf="isLoading && !isError">
+		<!-- Switching for a prettier loader - delete if you come across this -->
+		<!-- <mat-spinner class="spinner-center"></mat-spinner> -->
+		<img src="/img/loading.gif" />
+	</div>
+
+	<!-- Error -->
+	<div class="error-message text-center" *ngIf="!isLoading && isError">
+		<mat-icon>{{errorIcon}}</mat-icon>
+		<p>{{errorMessage}}</p>
+	</div>
+
+	<!-- No results -->
+	<div class="error-message text-center" *ngIf="!isLoading && !isError && !hasResults">
+		<mat-icon>{{resultsIcon}}</mat-icon>
+		<p>{{emptyMessage}}</p>
+	</div>
+</div>

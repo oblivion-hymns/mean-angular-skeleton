@@ -1,0 +1,14 @@
+<mat-list-item>
+	<mat-icon mat-list-icon>developer_board</mat-icon>
+
+	<div class="expand margin-left">
+		{{agency.name}}
+		<span class="agency-label" *ngIf="agency.abbreviation">
+			{{agency.abbreviation}}
+		</span>
+
+		<div style="float: right;" matTooltip="Agency reps">
+			<mat-icon class="icon-inline">person</mat-icon> {{agency.reps.length}}
+		</div>
+	</div>
+</mat-list-item>

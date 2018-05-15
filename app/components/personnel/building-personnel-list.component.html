@@ -1,0 +1,63 @@
+<!-- Floors -->
+<ng-container *ngIf="building && building.floors">
+	<ul class="horizontal-list">
+		<li (click)="loadPersonnel(null)" [class.active]="!selectedFloor">
+			<a>All</a>
+		</li>
+		<li *ngFor="let floor of building.floors" (click)="loadPersonnel(floor)"
+			[class.active]="selectedFloor == floor">
+			<a>{{floor}}</a>
+		</li>
+	</ul>
+</ng-container>
+
+<!-- Loading -->
+<div style="height: 384px; max-height: 384px; overflow-y: auto;">
+	<mercury-loading
+		[loading]="isLoading"
+		[error]="isError"
+		[errorMessage]="'Error loading personnel. Try again momentarily'"
+		[results]="personnel.length"
+		[resultsMessage]="'No personnel found'">
+	</mercury-loading>
+
+	<ng-container *ngIf="personnel.length && !isLoading">
+
+		<!-- Content -->
+		<div style="padding: 16px;">
+			<div class="text-secondary text-table-row-count pull-right">
+				{{personnel.length}} personnel
+			</div>
+
+			<mat-form-field>
+				<span matPrefix>
+					<mat-icon class="icon-inline">search</mat-icon>
+				</span>
+				<input matInput type="text" maxlength="64" [(ngModel)]="searchQuery" (keyup)="filterPersonnel()"/>
+			</mat-form-field>
+
+			<table class="expand">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Floor</th>
+						<th>Agency</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor="let person of displayPersonnel">
+						<td>
+							{{person.name.last}}, {{person.name.first}}
+						</td>
+						<td>
+							{{person.location.floor}}
+						</td>
+						<td>
+							{{person.location.agency.name}}
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</ng-container>
+</div>

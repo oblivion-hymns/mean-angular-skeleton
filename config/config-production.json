@@ -1,0 +1,23 @@
+{
+	"api":
+	{
+		"port": 80,
+		"token": "kcl4w1eil2nc6zp",
+		"url": "http://10.19.240.37"
+	},
+	"app":
+	{
+		"port": 3001,
+		"url": "http://dep-v-gsman"
+	},
+	"db":
+	{
+		"options":
+		{
+			"useMongoClient": true
+		},
+		"port": 27017,
+		"schema": "mercury",
+		"url": "localhost"
+	}
+}

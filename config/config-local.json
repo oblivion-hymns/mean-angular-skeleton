@@ -1,0 +1,50 @@
+{
+	"api":
+	{
+		"port": 80,
+		"token": "kcl4w1eil2nc6zp",
+		"url": "http://10.19.240.37"
+	},
+	"app":
+	{
+		"port": 3001,
+		"url": "http://localhost"
+	},
+	"db":
+	{
+		"options":
+		{
+			"useMongoClient": true
+		},
+		"port": 27017,
+		"schema": "mercury",
+		"url": "localhost"
+	},
+	"mail":
+	{
+		"enabled": true,
+		"defaultFrom": "State Police Mailserver <donotreply@dep.nj.gov>",
+		"redirect": true,
+		"redirectEmails": [
+			"Brian.Wilbur@dep.nj.gov",
+			"Holly.Rittenhouse@dep.nj.gov"
+		],
+		"smtp":
+		{
+			"host": "10.19.57.29"
+		}
+	},
+	"test":
+	{
+		"db":
+		{
+			"options":
+			{
+				"useMongoClient": true
+			},
+			"port": 27017,
+			"schema": "mercury-test",
+			"url": "localhost"
+		}
+	}
+}

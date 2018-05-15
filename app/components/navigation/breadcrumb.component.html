@@ -1,0 +1,5 @@
+<ul>
+	<li class="no-select" *ngFor="let breadcrumb of breadcrumbs" [routerLink]="breadcrumb.getRouterLink()">
+		{{breadcrumb.text}}
+	</li>
+</ul>

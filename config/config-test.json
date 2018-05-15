@@ -1,0 +1,31 @@
+{
+	"api":
+	{
+		"port": 80,
+		"token": "kcl4w1eil2nc6zp",
+		"url": "http://10.19.240.37"
+	},
+	"app":
+	{
+		"port": 3001,
+		"url": "http://localhost"
+	},
+	"db":
+	{
+		"options":
+		{
+			"useMongoClient": true
+		},
+		"port": 27017,
+		"schema": "mercury-test",
+		"url": "localhost"
+	},
+	"mail":
+	{
+		"enabled": false,
+		"smtp":
+		{
+			"host": "10.19.57.29"
+		}
+	}
+}

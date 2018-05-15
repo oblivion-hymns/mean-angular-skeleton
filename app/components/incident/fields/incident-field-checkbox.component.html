@@ -1,0 +1,11 @@
+<div class="expand" [class.margin-bottom]="!readonly" *ngIf="!display">
+	<mat-checkbox [disabled]="readonly" [(ngModel)]="value" (input)="emitValue()">
+		{{label}}
+	</mat-checkbox>
+</div>
+
+<div *ngIf="display">
+	<strong>{{label}}</strong><br />
+	<span *ngIf="value">Yes</span>
+	<span *ngIf="!value">No</span>
+</div>

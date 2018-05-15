@@ -1,0 +1,11 @@
+{
+	"app":
+	{
+		"messages":
+		{
+			"default": "Something went wrong. Please try again in a few moments",
+			"unauthorized": "You are not allowed to do that"
+		},
+		"moduleRoot": "./modules"
+	}
+}

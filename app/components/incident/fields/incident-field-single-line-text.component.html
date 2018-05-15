@@ -1,0 +1,15 @@
+<mat-form-field class="expand" *ngIf="!display">
+	<input matInput type="text"
+		[placeholder]="label"
+		[maxLength]="maxLength"
+		[disabled]="readonly"
+		[readonly]="readonly"
+		(input)="emitValue()"
+		[(ngModel)]="value"/>
+	<mat-hint align="end" *ngIf="value && maxLength">{{value.length}} / {{maxLength}}</mat-hint>
+</mat-form-field>
+
+<div *ngIf="display">
+	<strong>{{label}}</strong><br />
+	{{value || '-'}}
+</div>
